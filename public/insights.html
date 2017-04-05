@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CARed! - Car Recommendation</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/business-casual.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+    <style>
+    /* Style the tab */
+        div.tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        }
+
+        /* Style the buttons inside the tab */
+        div.tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        div.tab button:hover {
+        background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        div.tab button.active {
+        background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+        }
+
+        /* Style the close button */
+        .topright {
+        float: right;
+        cursor: pointer;
+        font-size: 20px;
+        }
+
+        .topright:hover {color: red;}
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div class="brand">CARed!</div>
+    <div class="address-bar">Buying your dream CAR made easy...</div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                <a class="navbar-brand" href="index.html">CARed!</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="insights.html">Data Insights</a>
+                    </li>
+                    <li>
+                        <a href="recommendaton.html">Recommendation</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="container">
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'Car Population Comparison')" id="defaultOpen">Car Population Comparison</button>
+          <button class="tablinks" onclick="openCity(event, 'Comparison By Make')">Comparison By Make</button>
+          <button class="tablinks" onclick="openCity(event, 'Price By Brand')">Price By Brand</button>
+        </div>
+
+        <div id="Car Population Comparison" class="tabcontent">
+            <div class='tableauPlaceholder' id='viz1490964736272' style='position: relative'>
+                <noscript>
+                    <a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;WD&#47;WDNGWW7FN&#47;1_rss.png' style='border: none' /></a>
+                </noscript>
+                <object class='tableauViz'  style='position: relative; !important'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                    <param name='path' value='shared&#47;WDNGWW7FN' /> <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;WD&#47;WDNGWW7FN&#47;1.png' /> 
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                </object>
+            </div>                
+            <script type='text/javascript'>                    
+                var divElement = document.getElementById('viz1490964736272');                    
+                var vizElement = divElement.getElementsByTagName('object')[0];                    
+                vizElement.style.width='100%';
+                vizElement.style.height='100%';
+                vizElement.style.minHeight='629px';
+                var scriptElement = document.createElement('script');                    
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+            </script>
+        </div>
+
+        <div id="Comparison By Make" class="tabcontent">
+            <div class='tableauPlaceholder' id='viz1491032273004' style='position: relative'>
+                <noscript><a href='#'>
+                    <img alt='Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CaRED&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a>
+                </noscript>
+                <object class='tableauViz'  style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                    <param name='site_root' value='' /><param name='name' value='CaRED&#47;Dashboard2' />
+                    <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CaRED&#47;Dashboard2&#47;1.png'/> 
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                </object>
+            </div>                
+            <script type='text/javascript'>                    
+                var divElement = document.getElementById('viz1491032273004');                    
+                var vizElement = divElement.getElementsByTagName('object')[0];                    
+                vizElement.style.width='100%';
+                vizElement.style.height='100%';
+                vizElement.style.minHeight='629px';
+                vizElement.style.maxHeight=(divElement.offsetWidth*0.75)+'px';                    
+                var scriptElement = document.createElement('script');                    
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+            </script>
+        </div>
+
+        <div id="Price By Brand" class="tabcontent">
+            <div class='tableauPlaceholder' id='viz1491032018503' style='position: relative'>
+                <noscript>
+                  <a href='#'><img alt='car &amp; price each year ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CaREDPrice&#47;carpriceeachyear&#47;1_rss.png' style='border: none' /></a>
+                </noscript>
+                <object class='tableauViz'  style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                    <param name='site_root' value='' /><param name='name' value='CaREDPrice&#47;carpriceeachyear' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CaREDPrice&#47;carpriceeachyear&#47;1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                </object>
+            </div>                
+            <script type='text/javascript'>                    
+                var divElement = document.getElementById('viz1491032018503');                    
+                var vizElement = divElement.getElementsByTagName('object')[0];                    
+                vizElement.style.width='100%';
+                vizElement.style.height='100%';
+                vizElement.style.minHeight='629px';                   
+                var scriptElement = document.createElement('script');                    
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+            </script>
+        </div>              
+    </div>
+    <!-- /.container -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; CARed! 2017</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+</body>
+
+</html>
