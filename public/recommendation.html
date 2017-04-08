@@ -21,6 +21,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -70,7 +71,7 @@
     </nav>
 
     <div class="container">
-                        <div class="row">
+        <div class="row">
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
@@ -78,32 +79,64 @@
                         <strong>form</strong>
                     </h2>
                     <hr>
-                    <p>Embark on the journey to find your dream car by filling out the following form ... </p>
-                    <form role="form">
+                    <p>Embark on the journey to find your dream car by filling out the following form... </p>
+                    <br>
+                    <form id="carForm">
                         <div class="row">
-                            <div class="form-group col-lg-12">
-                                <label>Budget</label>
+                            <div class="form-group col-lg-6">
+                                <label>Car Budget</label>
                                 <br><br>
-                                   Filter by price interval: <b>$ 60000</b> <input id="ex2" type="text" class="span2" value="" data-slider-min="60000" data-slider-max="1000000" data-slider-step="10000" data-slider-value="[300000,500000]"/> <b>$ 1000000</b>
+                                   Filter by price interval: <b>$ 79999</b> <input name="carBudget" id="carBudget" type="text" class="span2" value="carBudget" data-slider-min="79999" data-slider-max="1888000" data-slider-value="500000"/> <b>$ 1888000</b>
                             </div>
                             <div class="form-group col-lg-6">
-                                <label>Emal</label>
-                                <input type="email" class="form-control">
+                                <label>Number of Seats in my car</label>
+                                <br><br>
+                                  <select class="form-control" id="seats" name="seats">
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                  </select>
                             </div>
                             <div class="form-group col-lg-6">
-                                <label>Phone Number</label>
-                                <input type="tel" class="form-control">
+                                <label>Monthly Fuel Budget</label>
+                                <br><br>
+                                   Filter by price interval: <b>$ 600</b> <input name="fuelBudget" id="fuelBudget" type="text" class="span2" value="" data-slider-min="600" data-slider-max="10000" data-slider-value="2000"/> <b>$ 10000</b>
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label>Average KMs I drive my car monthly</label>
+                                <br><br>
+                                   Filter by KM interval: <b>KM 10</b> <input name="averageKM" id="averageKM" type="text" class="span2" value="" data-slider-min="0" data-slider-max="10000" data-slider-value="2000"/> <b>KM 10000</b>
                             </div>
                             <div class="clearfix"></div>
                             <div class="form-group col-lg-12">
                             </div>
-                            <div class="form-group col-lg-12">
-                                <input type="hidden" name="save" value="contact">
-                                <button type="submit" class="btn btn-default">Submit</button>
+                            <div class="form-group col-lg-12 text-center">
+                                <button type="submit" class="btn btn-primary">Get me my dream car now</button>
                             </div>
                         </div>
                     </form>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="box">
+            <div class="col-lg-12">
+                <table class="display table table-bordered" data-card-view="true" id="carTable" data-toggle="table">
+                  <thead>
+                    <tr>
+                      <th data-field="BRAND">Brand</th>
+                      <th data-field="MODEL">Model</th>
+                      <th data-field="KM_PER_LITRE">KM_PER_LTR</th>
+                      <th data-field="PRICE">PRICE</th>
+                      <th data-field="SEATINGCAPACITY">Seating Capacity</th>
+                    </tr>
+                  </thead>
+                </table>
+            </div>
             </div>
         </div>
     </div>
@@ -126,6 +159,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.2/bootstrap-slider.min.js"></script>
     <script src="js/slider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.0/bootstrap-table.min.js"></script>
     <!-- Script to Activate the Carousel -->
     <script>
     $('.carousel').carousel({
