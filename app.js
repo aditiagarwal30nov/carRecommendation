@@ -42,7 +42,7 @@ app.get('/cars', function(req, res) {
         if (err) {
             console.log("Error", err);
         } else {
-            var query = "SELECT * FROM FINAL_DATA WHERE formattedprice <=" + carBudget + " AND KM_Per_Litre >=" +  KM_Per_Litre + " AND SeatingCapacity = " + seats + " ORDER BY BrandValue DESC LIMIT 5;";
+            var query = "SELECT * FROM FINAL_DATA WHERE formattedprice <=" + carBudget + " AND KM_Per_Litre >=" +  KM_Per_Litre + " AND SeatingCapacity = " + seats + " ORDER BY BrandValue DESC LIMIT 6;";
             conn.query(query, function(err, rows) {
                 if (err) {
                     console.log("Error", err);
